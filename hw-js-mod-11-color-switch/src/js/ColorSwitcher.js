@@ -33,7 +33,7 @@ let timerId = null;
 
 function onStart() {
   timerId = setInterval(() => {
-    let bodyColor = colors[randomIntegerFromInterval(0, 5)];
+    let bodyColor = colors[randomIntegerFromInterval(0, colors.length)];
     refs.body.style.backgroundColor = `${bodyColor}`;
   }, 1000);
   refs.start.disabled = true;
